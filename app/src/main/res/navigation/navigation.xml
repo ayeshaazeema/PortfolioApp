@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ayeshaazeema.portofolioapp.ui.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/androidFragment"
+        android:name="com.ayeshaazeema.portofolioapp.ui.android.AndroidFragment"
+        android:label="AndroidFragment" />
+    <fragment
+        android:id="@+id/flutterFragment2"
+        android:name="com.ayeshaazeema.portofolioapp.FlutterFragment"
+        android:label="fragment_flutter"
+        tools:layout="@layout/fragment_flutter" />
+    <fragment
+        android:id="@+id/uiUxFragment2"
+        android:name="com.ayeshaazeema.portofolioapp.UiUxFragment"
+        android:label="fragment_ui_ux"
+        tools:layout="@layout/fragment_ui_ux" />
+    <fragment
+        android:id="@+id/experienceFragment2"
+        android:name="com.ayeshaazeema.portofolioapp.ui.experience.ExperienceFragment"
+        android:label="ExperienceFragment" >
+        <action
+            android:id="@+id/action_experienceFragment2_to_experienceDetailFragment"
+            app:destination="@id/experienceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/experienceDetailFragment"
+        android:name="com.ayeshaazeema.portofolioapp.ui.experience.ExperienceDetailFragment"
+        android:label="fragment_experience_detail"
+        tools:layout="@layout/fragment_experience_detail" />
+</navigation>

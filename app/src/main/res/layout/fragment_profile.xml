@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_background"
+    tools:context="ui.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBackgroundProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_198dp"
+            android:contentDescription="@string/imageview"
+            android:src="@drawable/navheader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_130dp"
+            android:layout_height="@dimen/_130dp"
+            android:layout_marginTop="@dimen/_130dp"
+            android:contentDescription="@string/imageview"
+            android:src="@drawable/profile_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBackgroundProfile" />
+
+        <TextView
+            android:id="@+id/tvNameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/name"
+            android:textSize="@dimen/_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvCareerProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/career"
+            android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameProfile" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvLinkedInProfile"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:backgroundTint="@color/orange"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCareerProfile">
+
+            <LinearLayout
+                android:layout_width="@dimen/_56dp"
+                android:layout_height="@dimen/_56dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_21dp"
+                    android:layout_height="@dimen/_21dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/linkedin" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvGitHubProfile"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:backgroundTint="@color/orange"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cvLinkedInProfile"
+            app:layout_constraintEnd_toStartOf="@id/cvEmailProfile"
+            app:layout_constraintStart_toEndOf="@id/cvLinkedInProfile"
+            app:layout_constraintTop_toTopOf="@id/cvLinkedInProfile">
+
+            <LinearLayout
+                android:layout_width="@dimen/_56dp"
+                android:layout_height="@dimen/_56dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_21dp"
+                    android:layout_height="@dimen/_21dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/github" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvEmailProfile"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:backgroundTint="@color/orange"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cvGitHubProfile"
+            app:layout_constraintEnd_toStartOf="@id/cvPhoneProfile"
+            app:layout_constraintStart_toEndOf="@id/cvGitHubProfile"
+            app:layout_constraintTop_toTopOf="@id/cvGitHubProfile">
+
+            <LinearLayout
+                android:layout_width="@dimen/_56dp"
+                android:layout_height="@dimen/_56dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_21dp"
+                    android:layout_height="@dimen/_21dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/mail" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvPhoneProfile"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:backgroundTint="@color/orange"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cvEmailProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cvEmailProfile"
+            app:layout_constraintTop_toTopOf="@id/cvEmailProfile">
+
+            <LinearLayout
+                android:layout_width="@dimen/_56dp"
+                android:layout_height="@dimen/_56dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_21dp"
+                    android:layout_height="@dimen/_21dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/phone" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAboutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_32dp"
+            android:layout_marginEnd="@dimen/_32dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            app:cardCornerRadius="@dimen/_15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvGitHubProfile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvAboutProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:text="@string/about"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nsProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAboutProfile">
+
+                    <TextView
+                        android:id="@+id/tvContentAboutProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/content" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
