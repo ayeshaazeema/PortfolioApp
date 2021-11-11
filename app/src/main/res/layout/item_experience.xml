@@ -1,66 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_8dp"
-    app:cardCornerRadius="@dimen/_20dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+
+        <variable
+            name="experience"
+            type="com.ayeshaazeema.portofolioapp.data.experience.Experience" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8dp"
+        app:cardCornerRadius="@dimen/_20dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvImageItemExperience"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_198dp"
-            app:cardCornerRadius="@dimen/_20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/ivItemExperience"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvImageItemExperience"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/imageview"
-                android:fitsSystemWindows="true"
-                tools:src="@tools:sample/avatars" />
+                android:layout_height="@dimen/_198dp"
+                app:cardCornerRadius="@dimen/_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/ivItemExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/imageview"
+                    android:fitsSystemWindows="true"
+                    app:experienceImage="@{experience}"
+                    tools:src="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/tvTitleItemExperience"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_16dp"
-            android:layout_marginTop="@dimen/_8dp"
-            android:layout_marginEnd="@dimen/_8dp"
-            android:maxLines="2"
-            android:text="@tools:sample/full_names"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/cvImageItemExperience"
-            app:layout_constraintTop_toBottomOf="@id/cvImageItemExperience" />
+            </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tvDetailItemExperience"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8dp"
-            android:layout_marginBottom="@dimen/_8dp"
-            android:maxLines="3"
-            android:text="@tools:sample/last_names"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/tvTitleItemExperience"
-            app:layout_constraintStart_toStartOf="@id/tvTitleItemExperience"
-            app:layout_constraintTop_toBottomOf="@id/tvTitleItemExperience" />
+            <TextView
+                android:id="@+id/tvTitleItemExperience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:maxLines="2"
+                android:text="@tools:sample/full_names"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:experienceTitle="@{experience}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cvImageItemExperience"
+                app:layout_constraintTop_toBottomOf="@id/cvImageItemExperience" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvDetailItemExperience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:maxLines="3"
+                android:text="@tools:sample/last_names"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sp"
+                app:experienceDetail="@{experience}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTitleItemExperience"
+                app:layout_constraintStart_toStartOf="@id/tvTitleItemExperience"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleItemExperience" />
 
-</com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

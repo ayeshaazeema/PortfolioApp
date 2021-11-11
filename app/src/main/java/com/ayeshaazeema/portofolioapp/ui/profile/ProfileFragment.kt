@@ -1,13 +1,11 @@
 package com.ayeshaazeema.portofolioapp.ui.profile
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ayeshaazeema.portofolioapp.R
+import androidx.fragment.app.Fragment
 import com.ayeshaazeema.portofolioapp.databinding.FragmentProfileBinding
-
 
 class ProfileFragment : Fragment() {
 

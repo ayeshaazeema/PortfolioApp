@@ -35,7 +35,7 @@ class ExperienceFragment : Fragment() {
                 )
             )
         }
-        
+
         adapterExperience.setData(ExperienceObject.listData)
 
         with(binding.rvExperience) {

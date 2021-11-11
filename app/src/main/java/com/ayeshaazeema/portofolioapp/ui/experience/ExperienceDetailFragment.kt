@@ -12,7 +12,7 @@ import com.ayeshaazeema.portofolioapp.databinding.FragmentExperienceDetailBindin
 class ExperienceDetailFragment : Fragment() {
     private var _binding: FragmentExperienceDetailBinding? = null
     private val binding get() = _binding!!
-    private val experienceArgs by navArgs<ExperienceDetailFragment>()
+    private val experienceArgs by navArgs<ExperienceDetailFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
